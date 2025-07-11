@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
-const API_URL = "https://posture-detection-backend-1.onrender.com"
+//const API_URL = "https://posture-detection-backend-1.onrender.com"
 
 const videoConstraints = {
   width: 640,
@@ -27,7 +27,7 @@ const App = () => {
     if (!screenshot) return;
 
     try {
-      const response = await axios.post(`${API_URL}/analyze`, {
+      const response = await axios.post(`https://posture-detection-backend-1.onrender.com/analyze`, {
         image: screenshot,
         postureType
       });
@@ -61,7 +61,7 @@ const App = () => {
       setFileInput(reader.result);
 
       try {
-        const response = await axios.post(`${API_URL}/analyze`, {
+        const response = await axios.post(`https://posture-detection-backend-1.onrender.com/analyze`, {
           image: reader.result,
           postureType,
         });
