@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 const API_URL = import.meta.env.VITE_API_URL;
 
+
 const videoConstraints = {
   width: 640,
   height: 480,
@@ -60,7 +61,7 @@ const App = () => {
       setFileInput(reader.result);
 
       try {
-        const response = await axios.post("http://localhost:5001/analyze", {
+        const response = await axios.post(`${API_URL}/analyze`, {
           image: reader.result,
           postureType,
         });
