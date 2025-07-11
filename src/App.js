@@ -4,7 +4,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL =process.env.VITE_API_URL;
 
 
 const videoConstraints = {
