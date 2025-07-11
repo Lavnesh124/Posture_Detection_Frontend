@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
-const API_URL = https://posture-detection-backend-1.onrender.com;
+const API_URL = "https://posture-detection-backend-1.onrender.com"
 
 const videoConstraints = {
   width: 640,
